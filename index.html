@@ -1,22 +1,23 @@
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  .site { background: #0a0f0a; color: #e8f5e8; min-height: 100vh; font-family: var(--font-sans); }
+  .site { background: #0a0f0a; color: #e8f5e8; min-height: 100vh; font-family: 'Inter', sans-serif; }
   nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 0.5px solid #1a3a1a; position: sticky; top: 0; background: rgba(10,15,10,0.92); backdrop-filter: blur(8px); z-index: 10; }
-  .logo { font-size: 15px; font-weight: 500; color: #4ade80; letter-spacing: 0.05em; }
+  .logo { font-size: 15px; font-weight: 500; color: #4ade80; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; }
   .logo span { color: #a3f0c3; }
   .hero { padding: 5rem 2rem 4rem; text-align: center; border-bottom: 0.5px solid #1a3a1a; }
-  .hero-tag { display: inline-block; font-size: 11px; letter-spacing: 0.12em; color: #4ade80; border: 0.5px solid #2d5a2d; padding: 4px 12px; border-radius: 100px; margin-bottom: 1.5rem; }
+  .hero-tag { display: inline-block; font-size: 11px; letter-spacing: 0.12em; color: #4ade80; border: 0.5px solid #2d5a2d; padding: 4px 12px; border-radius: 100px; margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; }
   .hero h1 { font-size: 48px; font-weight: 500; line-height: 1.15; color: #f0faf0; margin-bottom: 1rem; }
   .hero h1 em { font-style: normal; color: #4ade80; }
   .hero p { font-size: 15px; color: #86a886; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
   .hero-btns { display: flex; justify-content: center; gap: 10px; }
-  .btn-primary { background: #4ade80; color: #0a1a0a; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 8px; border: none; cursor: pointer; }
-  .btn-secondary { background: transparent; color: #86a886; font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 0.5px solid #2d5a2d; cursor: pointer; }
+  .btn-primary { background: #4ade80; color: #0a1a0a; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; }
+  .btn-secondary { background: transparent; color: #86a886; font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 0.5px solid #2d5a2d; cursor: pointer; font-family: 'Inter', sans-serif; }
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 0.5px solid #1a3a1a; }
   .stat { padding: 2rem; text-align: center; border-right: 0.5px solid #1a3a1a; }
   .stat:last-child { border-right: none; }
-  .stat-num { font-size: 32px; font-weight: 500; color: #4ade80; }
+  .stat-num { font-size: 32px; font-weight: 500; color: #4ade80; font-family: 'JetBrains Mono', monospace; }
   .stat-label { font-size: 12px; color: #6a8a6a; margin-top: 4px; letter-spacing: 0.04em; }
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #1a3a1a; border-top: 0.5px solid #1a3a1a; border-bottom: 0.5px solid #1a3a1a; }
   .feature { background: #0a0f0a; padding: 1.5rem; }
@@ -25,34 +26,35 @@
   .feature h3 { font-size: 14px; font-weight: 500; color: #c8e8c8; margin-bottom: 6px; }
   .feature p { font-size: 12px; color: #6a8a6a; line-height: 1.6; }
   .section { padding: 3rem 2rem; border-bottom: 0.5px solid #1a3a1a; }
-  .section-label { font-size: 11px; color: #4ade80; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+  .section-label { font-size: 11px; color: #4ade80; letter-spacing: 0.1em; margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; }
   .section h2 { font-size: 22px; font-weight: 500; color: #f0faf0; margin-bottom: 2rem; }
   .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .price-card { background: #0d150d; border: 0.5px solid #1a3a1a; border-radius: 10px; padding: 1.5rem; }
   .price-card.featured { border-color: #2d6a2d; }
-  .price-tier { font-size: 11px; letter-spacing: 0.1em; color: #4ade80; margin-bottom: 6px; }
-  .price-val { font-size: 24px; font-weight: 500; color: #f0faf0; margin-bottom: 8px; }
+  .price-tier { font-size: 11px; letter-spacing: 0.1em; color: #4ade80; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; }
+  .price-val { font-size: 24px; font-weight: 500; color: #f0faf0; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
   .price-desc { font-size: 12px; color: #6a8a6a; line-height: 1.6; }
   .price-features { margin-top: 1rem; display: flex; flex-direction: column; gap: 6px; }
   .pf { font-size: 12px; color: #86a886; display: flex; gap: 6px; }
   .pf::before { content: '—'; color: #2d6a2d; flex-shrink: 0; }
-  .free-badge { display: inline-block; font-size: 10px; letter-spacing: 0.08em; background: #0f2a0f; color: #4ade80; border: 0.5px solid #2d6a2d; padding: 3px 8px; border-radius: 100px; margin-bottom: 8px; }
+  .free-badge { display: inline-block; font-size: 10px; letter-spacing: 0.08em; background: #0f2a0f; color: #4ade80; border: 0.5px solid #2d6a2d; padding: 3px 8px; border-radius: 100px; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
   .free-conditions { margin-top: 12px; padding-top: 12px; border-top: 0.5px solid #1a3a1a; font-size: 11px; color: #4a6a4a; line-height: 1.6; }
-  .form-section { padding: 3rem 2rem 4rem; border-bottom: 0.5px solid #1a3a1a; }
+  .form-section { padding: 3rem 2rem 4rem; border-bottom: 0.5px solid #1a3a1a; display: flex; flex-direction: column; align-items: center; text-align: center; }
   .form-section h2 { font-size: 22px; font-weight: 500; color: #f0faf0; margin-bottom: 6px; }
   .form-section > p { font-size: 13px; color: #6a8a6a; margin-bottom: 2rem; }
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 640px; }
+  .form-inner { width: 100%; max-width: 640px; text-align: left; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .form-full { grid-column: 1 / -1; }
   .form-group { display: flex; flex-direction: column; gap: 5px; }
-  .form-group label { font-size: 11px; color: #6a8a6a; letter-spacing: 0.05em; }
-  .form-group input, .form-group select, .form-group textarea { background: #0d150d; border: 0.5px solid #2d4a2d; border-radius: 8px; color: #c8e8c8; font-size: 13px; padding: 9px 12px; outline: none; font-family: var(--font-sans); transition: border-color 0.15s; }
+  .form-group label { font-size: 11px; color: #6a8a6a; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; }
+  .form-group input, .form-group select, .form-group textarea { background: #0d150d; border: 0.5px solid #2d4a2d; border-radius: 8px; color: #c8e8c8; font-size: 13px; padding: 9px 12px; outline: none; font-family: 'Inter', sans-serif; transition: border-color 0.15s; }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #4ade80; }
   .form-group select option { background: #0d150d; }
   .form-group textarea { resize: vertical; min-height: 100px; }
-  .submit-btn { margin-top: 14px; width: 100%; max-width: 640px; background: #4ade80; color: #0a1a0a; font-size: 13px; font-weight: 500; padding: 11px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s; }
+  .submit-btn { margin-top: 14px; width: 100%; background: #4ade80; color: #0a1a0a; font-size: 13px; font-weight: 500; padding: 11px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s; font-family: 'Inter', sans-serif; }
   .submit-btn:hover { background: #22c55e; }
   .submit-btn:disabled { background: #1a3a1a; color: #4a6a4a; cursor: not-allowed; }
-  .toast { position: fixed; bottom: 1.5rem; right: 1.5rem; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .toast { position: fixed; bottom: 1.5rem; right: 1.5rem; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; opacity: 0; transition: opacity 0.2s; pointer-events: none; font-family: 'Inter', sans-serif; }
   .toast.success { background: #0f2a0f; color: #4ade80; border: 0.5px solid #2d6a2d; }
   .toast.error { background: #2a0f0f; color: #f87171; border: 0.5px solid #6a2d2d; }
   .toast.show { opacity: 1; }
@@ -66,9 +68,9 @@
   <nav>
     <div class="logo">LX<span>Plugins</span></div>
     <div style="display:flex;gap:1.5rem;">
-      <a href="#features" style="font-size:13px;color:#86a886;text-decoration:none;">Features</a>
-      <a href="#pricing" style="font-size:13px;color:#86a886;text-decoration:none;">Pricing</a>
-      <a href="#order" style="font-size:13px;color:#86a886;text-decoration:none;">Order</a>
+      <a href="#features" style="font-size:13px;color:#86a886;text-decoration:none;font-family:'Inter',sans-serif;">Features</a>
+      <a href="#pricing" style="font-size:13px;color:#86a886;text-decoration:none;font-family:'Inter',sans-serif;">Pricing</a>
+      <a href="#order" style="font-size:13px;color:#86a886;text-decoration:none;font-family:'Inter',sans-serif;">Order</a>
     </div>
   </nav>
 
@@ -158,41 +160,43 @@
   <div id="order" class="form-section">
     <h2>Request a plugin</h2>
     <p>Fill out the form and I'll get back to you within 24 hours.</p>
-    <div class="form-grid">
-      <div class="form-group">
-        <label>Your name</label>
-        <input type="text" id="f-name" placeholder="Alex" required />
+    <div class="form-inner">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Your name</label>
+          <input type="text" id="f-name" placeholder="Alex" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="f-email" placeholder="alex@server.gg" required />
+        </div>
+        <div class="form-group">
+          <label>Minecraft version</label>
+          <input type="text" id="f-version" placeholder="1.21.4" required />
+        </div>
+        <div class="form-group">
+          <label>Platform</label>
+          <select id="f-platform">
+            <option>Paper</option>
+            <option>Spigot</option>
+            <option>Bukkit</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Budget</label>
+          <input type="text" id="f-budget" placeholder="$50–$200 or Free tier" required />
+        </div>
+        <div class="form-group">
+          <label>Deadline</label>
+          <input type="text" id="f-deadline" placeholder="2 weeks" />
+        </div>
+        <div class="form-group form-full">
+          <label>Plugin description</label>
+          <textarea id="f-description" placeholder="Describe what you need — features, commands, permissions, any existing systems it needs to hook into..." required></textarea>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" id="f-email" placeholder="alex@server.gg" required />
-      </div>
-      <div class="form-group">
-        <label>Minecraft version</label>
-        <input type="text" id="f-version" placeholder="1.21.4" required />
-      </div>
-      <div class="form-group">
-        <label>Platform</label>
-        <select id="f-platform">
-          <option>Paper</option>
-          <option>Spigot</option>
-          <option>Bukkit</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Budget</label>
-        <input type="text" id="f-budget" placeholder="$50–$200 or Free tier" required />
-      </div>
-      <div class="form-group">
-        <label>Deadline</label>
-        <input type="text" id="f-deadline" placeholder="2 weeks" />
-      </div>
-      <div class="form-group form-full">
-        <label>Plugin description</label>
-        <textarea id="f-description" placeholder="Describe what you need — features, commands, permissions, any existing systems it needs to hook into..." required></textarea>
-      </div>
+      <button class="submit-btn" id="submit-btn" onclick="submitForm()">Submit commission</button>
     </div>
-    <button class="submit-btn" id="submit-btn" onclick="submitForm()">Submit commission</button>
   </div>
 
   <footer>
