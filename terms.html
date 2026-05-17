@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Development Terms & Conditions — Pi's Plugins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0f0a; color: #e8f5e8; font-family: 'Inter', sans-serif; line-height: 1.6; }
+    
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 0.5px solid #1a3a1a; position: sticky; top: 0; background: rgba(10,15,10,0.92); backdrop-filter: blur(8px); z-index: 10; }
+    .logo { font-size: 15px; font-weight: 500; color: #4ade80; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; text-decoration: none; }
+    .logo span { color: #a3f0c3; }
+    .nav-link { font-size: 13px; color: #86a886; text-decoration: none; font-family: 'Inter', sans-serif; transition: color 0.15s; }
+    .nav-link:hover { color: #4ade80; }
+    
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    
+    .header { text-align: center; padding: 3rem 0 2rem; border-bottom: 0.5px solid #1a3a1a; margin-bottom: 3rem; }
+    .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.12em; color: #4ade80; border: 0.5px solid #2d5a2d; padding: 4px 12px; border-radius: 100px; margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; }
+    .header h1 { font-size: 36px; font-weight: 500; color: #f0faf0; margin-bottom: 0.75rem; }
+    .header .subtitle { font-size: 13px; color: #6a8a6a; }
+    
+    .alert { background: #0f2a0f; border: 0.5px solid #2d6a2d; border-radius: 8px; padding: 16px 20px; margin-bottom: 3rem; font-size: 13px; color: #c8e8c8; }
+    .alert strong { color: #4ade80; }
+    
+    h2 { font-size: 24px; font-weight: 600; color: #f0faf0; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid #1a3a1a; }
+    h2:first-of-type { margin-top: 0; }
+    
+    h3 { font-size: 18px; font-weight: 500; color: #c8e8c8; margin: 2rem 0 0.75rem; }
+    
+    h4 { font-size: 15px; font-weight: 500; color: #a3f0c3; margin: 1.5rem 0 0.5rem; }
+    
+    p { font-size: 14px; color: #86a886; margin-bottom: 1rem; }
+    
+    ul, ol { margin: 1rem 0 1.5rem 1.5rem; color: #86a886; font-size: 14px; }
+    li { margin-bottom: 0.5rem; }
+    
+    strong { color: #c8e8c8; font-weight: 600; }
+    
+    .penalty-box { background: #2a0f0f; border: 0.5px solid #6a2d2d; border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #f87171; }
+    
+    .code-block { background: #0d150d; border: 0.5px solid #2d4a2d; border-radius: 8px; padding: 16px; margin: 1rem 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a3f0c3; overflow-x: auto; }
+    
+    .highlight { background: #0f2a0f; border-left: 2px solid #4ade80; padding: 12px 16px; margin: 1rem 0; font-size: 13px; color: #c8e8c8; }
+    
+    .section-number { color: #4ade80; font-family: 'JetBrains Mono', monospace; margin-right: 0.5rem; }
+    
+    .checkmark-list { list-style: none; margin-left: 0; }
+    .checkmark-list li { position: relative; padding-left: 1.5rem; }
+    .checkmark-list li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; font-weight: bold; }
+    
+    .back-link { display: inline-block; margin-top: 3rem; font-size: 13px; color: #4ade80; text-decoration: none; border: 0.5px solid #2d5a2d; padding: 8px 16px; border-radius: 8px; transition: all 0.15s; }
+    .back-link:hover { background: #0f2a0f; border-color: #4ade80; }
+    
+    footer { padding: 1.5rem 2rem; border-top: 0.5px solid #1a3a1a; margin-top: 4rem; }
+    footer p { font-size: 11px; color: #3a5a3a; text-align: center; }
+    footer a { color: #4ade80; text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: #22c55e; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Pi's<span>Plugins</span></a>
+  <div style="display:flex;gap:1.5rem;">
+    <a href="index.html#features" class="nav-link">Features</a>
+    <a href="index.html#pricing" class="nav-link">Pricing</a>
+    <a href="index.html#order" class="nav-link">Order</a>
+    <a href="terms.html" class="nav-link" style="color: #4ade80;">Terms</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="header">
+    <div class="header-tag">Legal Agreement</div>
+    <h1>Development Terms & Conditions</h1>
+    <p class="subtitle">Effective upon service request • Version 1.0 • Last updated May 17, 2026</p>
+  </div>
+
+  <div class="alert">
+    <strong>By requesting plugin development services</strong>, you automatically and irrevocably agree to all terms contained in this Agreement. No separate signature is required. Read carefully before proceeding.
+  </div>
+
+  <h2><span class="section-number">1.</span> Acceptance of Terms</h2>
+  <p>By requesting plugin development services from Developer, whether through direct contact, website submission, or any other communication channel, Client automatically and irrevocably agrees to all terms contained in this Agreement. No separate signature is required.</p>
+  <p>Client acknowledges that this Agreement is publicly available and that requesting development services constitutes full acceptance of these terms.</p>
+
+  <h2><span class="section-number">2.</span> Ownership Structure</h2>
+  
+  <h3>2.1 Majority Ownership</h3>
+  <p>Developer retains permanent majority ownership (minimum 51%) of all plugins developed under this Agreement. This majority ownership:</p>
+  <ul>
+    <li><strong>CANNOT</strong> be purchased, transferred, or negotiated under any circumstances</li>
+    <li>Remains with Developer in perpetuity</li>
+    <li>Survives any termination, dissolution, or modification of this Agreement</li>
+    <li>Is non-dilutable regardless of Client investment or payment</li>
+  </ul>
+
+  <h3>2.2 Minority Ownership</h3>
+  <p>Client receives minority ownership (maximum 49%) upon full payment of all fees, subject to all terms of this Agreement.</p>
+
+  <h2><span class="section-number">3.</span> Intellectual Property Rights</h2>
+  
+  <h3>3.1 IP Sharing</h3>
+  <p>All intellectual property, including but not limited to:</p>
+  <ul>
+    <li>Source code, algorithms, and implementations</li>
+    <li>Design patterns, architectures, and methodologies</li>
+    <li>Documentation, comments, and technical specifications</li>
+    <li>Proprietary techniques and innovations</li>
+    <li>Trade secrets and know-how</li>
+  </ul>
+  <p>Is shared <strong>50/50</strong> between Developer and Client upon project completion and full payment.</p>
+
+  <h3>3.2 IP Restrictions</h3>
+  <p>Client's 50% IP share does NOT grant the right to:</p>
+  <ul>
+    <li>Claim sole authorship or ownership</li>
+    <li>Sell, license, or sublicense the plugin without Developer's written consent</li>
+    <li>Remove or modify Developer attribution</li>
+    <li>Create derivative works without Developer's approval</li>
+    <li>Transfer IP rights to third parties without Developer's written consent</li>
+  </ul>
+
+  <h3>3.3 Developer Rights</h3>
+  <p>Developer retains the unlimited right to:</p>
+  <ul>
+    <li>Use the plugin in portfolios, demonstrations, and marketing materials</li>
+    <li>Reference the project in professional contexts</li>
+    <li>Reuse general techniques, patterns, and non-proprietary code in future projects</li>
+    <li>Maintain copies of all source code and documentation</li>
+  </ul>
+
+  <h2><span class="section-number">4.</span> Anti-Shenanigans Clause</h2>
+
+  <h3>4.1 Definition of Shenanigans</h3>
+  <p>"Shenanigans" includes, but is not limited to:</p>
+  <ul>
+    <li>Refusing payment or delaying payment beyond agreed terms</li>
+    <li>Disputing charges in bad faith after delivery</li>
+    <li>Claiming ownership beyond agreed percentages</li>
+    <li>Attempting to exclude Developer from project decisions</li>
+    <li>Removing Developer attribution or credits</li>
+    <li>Reverse engineering to circumvent licensing</li>
+    <li>Providing false information or misrepresenting requirements</li>
+    <li>Attempting to hire other developers to replicate the plugin</li>
+    <li>Distributing the plugin in violation of agreed terms</li>
+    <li>Filing frivolous legal claims or disputes</li>
+    <li>Attempting to renegotiate ownership structure</li>
+    <li>Using the plugin for illegal or unethical purposes</li>
+    <li>Breaching confidentiality or non-disparagement obligations</li>
+    <li>Any attempt to circumvent, violate, or undermine this Agreement</li>
+  </ul>
+
+  <h3>4.2 Automatic Financial Penalties</h3>
+  <p>Upon any instance of Shenanigans, <strong>Client agrees to pay Developer immediately:</strong></p>
+  
+  <div class="penalty-box">
+    • Base Penalty: $10,000 USD per instance<br>
+    • Project Multiplier: 5× the total project value<br>
+    • Legal Fees: 100% of Developer's attorney fees and court costs<br>
+    • Reputation Damages: $5,000 USD for public disputes<br>
+    • Time Penalty: $500 USD per day until compliance
+  </div>
+
+  <div class="code-block">
+TOTAL = (Base Penalty + (Project Value × 5) + Legal Fees + Reputation Damages + Time Penalty)
+  </div>
+
+  <h3>4.3 Immediate Consequences</h3>
+  <p>Upon Shenanigans, Developer may immediately:</p>
+  <ul>
+    <li>Revoke Client's access to the plugin</li>
+    <li>Disable all plugin functionality via kill switch</li>
+    <li>Terminate all licenses and usage rights</li>
+    <li>Pursue legal action without further notice</li>
+    <li>Publicly disclose the breach (after legal consultation)</li>
+    <li>Report Client to relevant authorities if illegal activity is involved</li>
+  </ul>
+
+  <h3>4.4 No Dispute Waiver</h3>
+  <p>Client waives the right to dispute penalties by requesting services. Client acknowledges:</p>
+  <ul>
+    <li>These penalties are liquidated damages, not punitive</li>
+    <li>Actual damages may exceed penalty amounts</li>
+    <li>Payment of penalties does not waive other remedies</li>
+    <li>Developer may pursue additional damages beyond stated penalties</li>
+  </ul>
+
+  <h2><span class="section-number">5.</span> Payment Terms</h2>
+
+  <h3>5.1 Payment Structure</h3>
+  <ul>
+    <li><strong>Deposit:</strong> 50% of total project cost upfront (non-refundable)</li>
+    <li><strong>Final Payment:</strong> 50% upon completion, before delivery</li>
+    <li><strong>Hourly Rate:</strong> 7USD/hour for changes beyond original scope</li>
+    <li><strong>Revision Fee:</strong> [AMOUNT] per major revision after initial delivery</li>
+  </ul>
+
+  <h3>5.2 Late Payment</h3>
+  <p>Late payments incur:</p>
+  <ul>
+    <li>5% fee after 7 days</li>
+    <li>10% additional fee after 14 days</li>
+    <li>Automatic termination of usage rights after 30 days</li>
+    <li>Interest at 18% APR on all overdue amounts</li>
+  </ul>
+
+  <h3>5.3 Refund Policy</h3>
+  <div class="highlight">
+    <strong>NO REFUNDS</strong> after development begins. Deposits are non-refundable under all circumstances.
+  </div>
+
+  <h2><span class="section-number">6.</span> License Grant</h2>
+
+  <h3>6.1 Client License</h3>
+  <p>Upon full payment, Client receives a <strong>non-exclusive, non-transferable license</strong> to:</p>
+  <ul>
+    <li>Use the plugin on Client's designated server(s)</li>
+    <li>Receive updates and support as specified in project scope</li>
+    <li>Configure and customize plugin settings</li>
+  </ul>
+
+  <h3>6.2 License Restrictions</h3>
+  <p>Client <strong>MAY NOT:</strong></p>
+  <ul>
+    <li>Redistribute, resell, or sublicense the plugin</li>
+    <li>Decompile, reverse engineer, or modify source code without permission</li>
+    <li>Use the plugin on more servers than licensed</li>
+    <li>Share credentials or access with unauthorized parties</li>
+  </ul>
+
+  <h2><span class="section-number">7.</span> Scope and Deliverables</h2>
+
+  <h3>7.1 Development Scope</h3>
+  <p>Developer will create a custom Minecraft plugin according to specifications agreed upon in writing before development begins.</p>
+
+  <h3>7.2 Included Services</h3>
+  <ul>
+    <li>Initial plugin development per agreed specifications</li>
+    <li>Basic documentation</li>
+    <li>[X] days of bug fixes after delivery</li>
+    <li>[Y] hours of support</li>
+  </ul>
+
+  <h3>7.3 Not Included (Additional Fees Apply)</h3>
+  <ul>
+    <li>Hosting, server setup, or infrastructure</li>
+    <li>Training beyond basic documentation</li>
+    <li>Features not in original scope</li>
+    <li>Compatibility with future Minecraft versions</li>
+    <li>Third-party API integrations not specified initially</li>
+  </ul>
+
+  <h2><span class="section-number">8.</span> Warranties and Disclaimers</h2>
+
+  <h3>8.1 Developer Warranties</h3>
+  <p>Developer warrants that:</p>
+  <ul>
+    <li>Code will be originally developed or properly licensed</li>
+    <li>Plugin will substantially conform to agreed specifications</li>
+    <li>Developer has the right to grant licenses herein</li>
+  </ul>
+
+  <h3>8.2 Disclaimer</h3>
+  <div class="highlight">
+    <strong>EXCEPT AS EXPRESSLY STATED, PLUGIN IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</strong>
+  </div>
+  <p>Developer is not responsible for:</p>
+  <ul>
+    <li>Server downtime or performance issues</li>
+    <li>Data loss or corruption</li>
+    <li>Incompatibility with other plugins</li>
+    <li>Changes to Minecraft/Spigot/Paper APIs</li>
+    <li>Third-party service failures</li>
+  </ul>
+
+  <h2><span class="section-number">9.</span> Limitation of Liability</h2>
+  <div class="highlight">
+    <strong>DEVELOPER'S TOTAL LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY CLIENT.</strong>
+  </div>
+  <p>Developer is not liable for:</p>
+  <ul>
+    <li>Indirect, incidental, or consequential damages</li>
+    <li>Lost profits or business opportunities</li>
+    <li>Data loss or corruption</li>
+    <li>Third-party claims</li>
+    <li>Force majeure events</li>
+  </ul>
+
+  <h2><span class="section-number">10.</span> Termination</h2>
+
+  <h3>10.1 Termination by Client</h3>
+  <p>Client may terminate before completion by:</p>
+  <ul>
+    <li>Providing 7 days written notice</li>
+    <li>Paying for all work completed to date</li>
+    <li>Forfeiting deposit and all ownership/IP rights</li>
+  </ul>
+
+  <h3>10.2 Termination by Developer</h3>
+  <p>Developer may terminate immediately if Client:</p>
+  <ul>
+    <li>Fails to make payments when due</li>
+    <li>Engages in Shenanigans (see Section 4)</li>
+    <li>Breaches any material term of this Agreement</li>
+    <li>Uses the plugin illegally or unethically</li>
+  </ul>
+
+  <h3>10.3 Effect of Termination</h3>
+  <p>Upon termination:</p>
+  <ul>
+    <li>All licenses immediately revoke</li>
+    <li>Client must cease all use of the plugin</li>
+    <li>All IP rights revert to Developer</li>
+    <li>Outstanding payments become immediately due</li>
+    <li>Penalties under Section 4 apply if applicable</li>
+  </ul>
+
+  <h2><span class="section-number">11.</span> Dispute Resolution</h2>
+
+  <h3>11.1 Governing Law</h3>
+  <p>This Agreement is governed by the laws of British Columbia, CA, without regard to conflict of law principles.</p>
+
+  <h3>11.2 Arbitration</h3>
+  <p>Disputes will be resolved through binding arbitration in Canada, except:</p>
+  <ul>
+    <li>Developer may seek injunctive relief in court for IP violations</li>
+    <li>Developer may pursue penalties under Section 4 in court</li>
+    <li>Either party may pursue claims in small claims court</li>
+  </ul>
+
+  <h3>11.3 Attorney Fees</h3>
+  <div class="highlight">
+    <strong>Prevailing party in any dispute is entitled to recover 100% of attorney fees and costs.</strong>
+  </div>
+
+  <h2><span class="section-number">12.</span> General Provisions</h2>
+
+  <h3>12.1 Entire Agreement</h3>
+  <p>This Agreement constitutes the entire agreement between parties and supersedes all prior negotiations, representations, or agreements.</p>
+
+  <h3>12.2 Amendments</h3>
+  <p>This Agreement may only be modified by written amendment signed by Developer. Developer reserves the right to update terms for future projects by posting updated terms at this URL.</p>
+
+  <h3>12.3 Severability</h3>
+  <p>If any provision is found invalid or unenforceable, remaining provisions remain in full effect.</p>
+
+  <h3>12.4 Independent Contractors</h3>
+  <p>Parties are independent contractors. Nothing creates a partnership, joint venture, or employment relationship.</p>
+
+  <h2><span class="section-number">13.</span> Acknowledgment and Acceptance</h2>
+
+  <div class="highlight">
+    <p><strong>BY REQUESTING PLUGIN DEVELOPMENT SERVICES, CLIENT ACKNOWLEDGES:</strong></p>
+    <ul class="checkmark-list">
+      <li>Client has read and understands all terms of this Agreement</li>
+      <li>Client agrees to the ownership structure (Developer 51%+ majority, non-purchasable)</li>
+      <li>Client agrees to 50/50 IP sharing with restrictions</li>
+      <li>Client agrees to automatic penalties for Shenanigans</li>
+      <li>Client agrees this Agreement is binding upon service request</li>
+      <li>Client has had opportunity to consult legal counsel</li>
+      <li>Client accepts all terms voluntarily and without coercion</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 0.5px solid #1a3a1a; text-align: center;">
+    <p style="font-size: 13px; color: #6a8a6a; font-family: 'JetBrains Mono', monospace;">
+      This Agreement is effective as of the date Client requests development services.
+    </p>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to home</a>
+</div>
+
+<footer>
+  <p>© 2026 KeyLymPi. All rights reserved. • <a href="terms.html">Terms & Conditions</a></p>
+</footer>
+
+</body>
+</html>
